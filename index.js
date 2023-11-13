@@ -6,7 +6,6 @@ import AdvertiserView from './src/AdvertiserView'
 import ImageView from './src/ImageView'
 import NativeMediaView from './src/NativeMediaView'
 import StoreView from './src/StoreView'
-import StarRatingView from './src/StarRatingView'
 import PriceView from "./src/PriceView";
 import AdBadge from "./src/AdBadge";
 import NativeAdView from './src';
@@ -35,7 +34,6 @@ export {
   ImageView,
   NativeMediaView,
   StoreView,
-  StarRatingView,
   PriceView,
   AdBadge,
   AdOptions,
