@@ -27,7 +27,6 @@ NSNumber *imageViewId;
 NSNumber *callToActionViewId;
 NSNumber *headlineViewId;
 NSNumber *priceViewId;
-NSNumber *starViewId;
 NSNumber *advertiserViewId;
 NSNumber *taglineViewId;
 NSNumber *storeViewId;
@@ -416,29 +415,6 @@ BOOL *nonPersonalizedAds;
             }
         }];
     });
-}
-
-- (void)setStarrating:(NSNumber *)starrating
-{
-
-    starViewId = starrating;
-
-
-    dispatch_async(RCTGetUIManagerQueue(),^{
-
-        [bridge.uiManager addUIBlock:^(RCTUIManager *uiManager, NSDictionary<NSNumber *,UIView *> *viewRegistry) {
-
-            UIView *starratingView = viewRegistry[starrating];
-            if (starratingView != nil) {
-                [self setStarRatingView:starratingView];
-                if (self.nativeAd != nil) {
-
-                    [self reloadAdInView:self.nativeAd isMedia:NO];
-                }
-            }
-        }];
-    });
-
 }
 
 - (void)setCallToAction:(NSNumber *)callToAction
